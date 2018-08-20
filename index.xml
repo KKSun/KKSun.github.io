@@ -17,7 +17,9 @@
       <pubDate>Mon, 20 Aug 2018 03:47:50 -0400</pubDate>
       
       <guid>https://kksun.github.io/posts/workonnumpy/</guid>
-      <description>Work on Numpy, Pandas and Matplotlib These three libs are really useful in data analysis.</description>
+      <description>Work on Numpy, Pandas and Matplotlib These three libs are really useful in data analysis. I use a piece on dataset in Kaggle to show a little demo of using these libraries.
+Import CVS as data CVS files cannot be manipulated directly by python, therefore we use Pandas to convert it into what we need.
+import numpy as np import pandas as pd import matplotlib.pyplot as plt data = pd.</description>
     </item>
     
     <item>
