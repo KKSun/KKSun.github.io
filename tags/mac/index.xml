@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mac on sudo KKSun</title>
+    <link>https://kksun.github.io/tags/mac/</link>
+    <description>Recent content in Mac on sudo KKSun</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 11 Apr 2018 05:06:31 -0400</lastBuildDate>
+    
+	<atom:link href="https://kksun.github.io/tags/mac/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>New Mac Settings for OBSESSIONS</title>
+      <link>https://kksun.github.io/posts/new_mac_setting/</link>
+      <pubDate>Wed, 11 Apr 2018 05:06:31 -0400</pubDate>
+      
+      <guid>https://kksun.github.io/posts/new_mac_setting/</guid>
+      <description>强迫症的新Macbook设置指南 新mac到了，想要保持以前的使用习惯还是要配置一番，边配置边写咯
+触摸板三指拖移 三指拖移在设置&amp;gt;辅助功能&amp;gt;鼠标与触摸板&amp;gt;触摸板选项，启动拖移中选择三指拖移。
+显示电量百分比 确认节能器的显示电源状态已经打勾（默认），在屏幕顶上菜单条中点击电池，选择显示电池百分比。
+brew安装 首先下载brew的安装脚本brew安装脚本 ruby brew_install.rb
+链接brewcask brew tap caskroom/cask
+用brew安装一切 python3 brew cask install java …… 所有的软件源管理都在brew中，yarn、pip、npm都通过brew安装。
+brew cask安装小插件 包括quicksilver，go2shell
+轻度修改.vimrc 只添加三行，显示一下高亮代码即可
+syntax enable syntax on colorscheme desert  配置shell 在shell的设置中将默认shell改为zsh，我没有使用iTerm2，用的就是Mac自带的终端，改成自己喜欢的颜色和字体就好
+git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc  配置quick look 使用“一指禅”来查看各种文件，包括代码高亮和视频等。 脚本链接quick look安装脚本
+用virtual box安装ubuntu 有的时候不的不用linux（T—T！） vmware碰到了显示不全的问题，安装进行不下去；如果使用快速安装则不能装增强应用。感觉很坑，遂弃之。 parallel desktop碰到的问题是安装后重启不能进入系统，也弃了。 回到virtual box，勉强用一用也可以，增强应用如果装不上先sudo apt-get upgrade，升级了依赖就能装上了。 安装增强之后我做到了双向共享剪贴板（文字），但不能系统间文件拖拽。 共享文件夹在安装增强应用后会自动挂在在/media文件夹下，如果不能访问共享文件夹，把本机用户添加到vboxsf用户组就好了。 这个虚拟机先凑合使着
+安装win双系统 剩下的随用随装 包括intellij idea，pycharm，anaconda等等</description>
+    </item>
+    
+    <item>
+      <title>Delete &amp; Reinstall Mysql on Mac</title>
+      <link>https://kksun.github.io/posts/delete_mysql/</link>
+      <pubDate>Wed, 07 Mar 2018 02:14:36 -0500</pubDate>
+      
+      <guid>https://kksun.github.io/posts/delete_mysql/</guid>
+      <description>Delete and re-install Mysql Way to completely delete Mysql on Macbook It is hard to delete Mysql completely on mac, because it is not in /Application folder and it has many parts deperated in different places.
+Following the terminal command below sudo rm /usr/local/mysql sudo rm -rf /usr/local/mysql* sudo rm -rf /Library/StartupItems/MySQLCOM sudo rm -rf /Library/PreferencePanes/My* vim /etc/hostconfig /* remove the line &amp;quot;MYSQLCOM=-YES-&amp;quot; and save the file if you do not have this file before just skip this step */ rm -rf ~/Library/PreferencePanes/My* sudo rm -rf /Library/Receipts/mysql* sudo rm -rf /Library/Receipts/MySQL* sudo rm -rf /var/db/receipts/com.</description>
+    </item>
+    
+  </channel>
+</rss>

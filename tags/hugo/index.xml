@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugo on sudo KKSun</title>
+    <link>https://kksun.github.io/tags/hugo/</link>
+    <description>Recent content in Hugo on sudo KKSun</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 12 Dec 2017 05:04:57 -0500</lastBuildDate>
+    
+	<atom:link href="https://kksun.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hugo &#43; macdown &#43; Terminal</title>
+      <link>https://kksun.github.io/posts/hugoandmacdown/</link>
+      <pubDate>Tue, 12 Dec 2017 05:04:57 -0500</pubDate>
+      
+      <guid>https://kksun.github.io/posts/hugoandmacdown/</guid>
+      <description>Editor  Hugo is easy to use macdown is enough for me to write md files macdown is free :-p  Terminal tool  macdown terminal tool can directly open macdown files from terminal Then the terminal is the only thing I need to start writing and deploy  In the future  I will try to write a image hoster. Acturally I don&amp;rsquo;t have to, but I would like to take this as a kind of practice.</description>
+    </item>
+    
+    <item>
+      <title>Hugo &#43; Github Pages</title>
+      <link>https://kksun.github.io/posts/first_article/</link>
+      <pubDate>Mon, 11 Dec 2017 20:08:16 -0500</pubDate>
+      
+      <guid>https://kksun.github.io/posts/first_article/</guid>
+      <description>Install Hugo Install hugo following the instruction of the linked document is a piece of cake. Homebrew is a fantastic tool for mac users. After installation, Hugo new site myblog will generate a project called myblog for you. Things in /myblog is the source code of your blog.
+Choose a Theme Actually, I don&amp;rsquo;t feel those themes on Hugo official website are of good look. Some of them are not really easy to use because of their poor ducumentation.</description>
+    </item>
+    
+  </channel>
+</rss>
