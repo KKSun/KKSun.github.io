@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://kksun.github.io/posts/use-vscode-ssh-remote/</loc>
+    <lastmod>2019-05-04T23:22:59-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://kksun.github.io/posts/workonnumpy/</loc>
     <lastmod>2018-08-20T03:47:50-04:00</lastmod>
   </url>
@@ -43,7 +48,7 @@
   </url>
   
   <url>
-    <loc>https://kksun.github.io/catagories/blog--tools/</loc>
+    <loc>https://kksun.github.io/catagories/blog-tools/</loc>
     <lastmod>2017-12-12T05:04:57-05:00</lastmod>
     <priority>0</priority>
   </url>
@@ -74,7 +79,7 @@
   
   <url>
     <loc>https://kksun.github.io/posts/</loc>
-    <lastmod>2018-08-20T03:47:50-04:00</lastmod>
+    <lastmod>2019-05-04T23:22:59-04:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -92,7 +97,7 @@
   
   <url>
     <loc>https://kksun.github.io/</loc>
-    <lastmod>2018-08-20T03:47:50-04:00</lastmod>
+    <lastmod>2019-05-04T23:22:59-04:00</lastmod>
     <priority>0</priority>
   </url>
   
