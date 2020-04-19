@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Linux on sudo KKSun</title>
@@ -18,7 +18,7 @@
       
       <guid>https://kksun.github.io/posts/long-distance-linux-command/</guid>
       <description>I have to work on Linux Server remotely these days. So I would like to take this as a note of commands on manipulating remote files.
-ssh command shell to login remote machine without entering password set user abc123 set host 192.168.0.2 set password [your password] set timeout -1 spawn ssh $user@$host expect &amp;quot;*assword:*&amp;quot; send &amp;quot;$password\r&amp;quot; interact expect eof  scp command your user name is abc123 and you want to copy file this.</description>
+ssh command shell to login remote machine without entering password set user abc123 set host 192.168.0.2 set password [your password] set timeout -1 spawn ssh $user@$host expect &amp;quot;*assword:*&amp;quot; send &amp;quot;$password\r&amp;quot; interact expect eof scp command your user name is abc123 and you want to copy file this.</description>
     </item>
     
   </channel>

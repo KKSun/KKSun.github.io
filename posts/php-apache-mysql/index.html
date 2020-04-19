@@ -14,7 +14,7 @@
 <meta name="description" content="">
 <meta name="keywords" content="">
 <meta name="author" content="">
-<meta name="generator" content="Hugo 0.54.0" />
+<meta name="generator" content="Hugo 0.69.0" />
 
   <meta property="og:title" content="Php &amp; Apache &amp; Mysql" />
 <meta property="og:description" content="" />
@@ -127,27 +127,17 @@
 		    <div id="toc" class="pure-u-1 pure-u-md-1-4">
 				<small class="toc-label">Contents</small>
 		   	 	<nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#environment-for-discuzx3-0-on-ubuntu">Environment for DiscuzX3.0 on Ubuntu</a>
-<ul>
-<li><a href="#install-php5-6">Install php5.6</a>
-<ul>
-<li><a href="#add-source-first">Add source first</a></li>
-<li><a href="#install">Install</a></li>
-</ul></li>
-<li><a href="#mysql5-7-install">Mysql5.7 install</a></li>
-<li><a href="#apache-is-easy">Apache is easy</a></li>
-<li><a href="#discuzx3-0">DiscuzX3.0</a>
-<ul>
-<li><a href="#fix-mysql-connect">fix <code>mysql_connect()</code></a></li>
-<li><a href="#fix-xml-parser-create">fix <code>xml_parser_create()</code></a></li>
-</ul></li>
-<li><a href="#finally">Finally</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#environment-for-discuzx30-on-ubuntu">Environment for DiscuzX3.0 on Ubuntu</a>
+      <ul>
+        <li><a href="#install-php56">Install php5.6</a></li>
+        <li><a href="#mysql57-install">Mysql5.7 install</a></li>
+        <li><a href="#apache-is-easy">Apache is easy</a></li>
+        <li><a href="#discuzx30">DiscuzX3.0</a></li>
+        <li><a href="#finally">Finally</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
 		    </div>
 		    
@@ -175,66 +165,35 @@
 
 			
 
-            
-
-<h2 id="environment-for-discuzx3-0-on-ubuntu">Environment for DiscuzX3.0 on Ubuntu</h2>
-
-<h3 id="install-php5-6">Install php5.6</h3>
-
+            <h2 id="environment-for-discuzx30-on-ubuntu">Environment for DiscuzX3.0 on Ubuntu</h2>
+<h3 id="install-php56">Install php5.6</h3>
 <h4 id="add-source-first">Add source first</h4>
-
 <p><code>sudo add-apt-repository ppa:ondrej/php</code></p>
-
 <h4 id="install">Install</h4>
-
 <pre><code>sudo apt-get update
 sudo apt-get install -y php5.6
-</code></pre>
-
-<h3 id="mysql5-7-install">Mysql5.7 install</h3>
-
+</code></pre><h3 id="mysql57-install">Mysql5.7 install</h3>
 <pre><code>sudo apt-get install mysql
 sudo mysql -u root
-</code></pre>
-
-<p>in mysql use this line to set password for <code>root</code></p>
-
+</code></pre><p>in mysql use this line to set password for <code>root</code></p>
 <pre><code>UPDATE mysql.user SET plugin=&quot;mysql_native_password&quot;,   
 authentication_string=PASSWORD(&quot;password&quot;) WHERE user=&quot;root&quot;;   
 SET GLOBAL validate_password_policy=0;   
-</code></pre>
-
-<p>restart, then you can login as root with password</p>
-
+</code></pre><p>restart, then you can login as root with password</p>
 <pre><code>sudo service mysql restart
-</code></pre>
-
-<h3 id="apache-is-easy">Apache is easy</h3>
-
+</code></pre><h3 id="apache-is-easy">Apache is easy</h3>
 <pre><code>sudo apt-get install apache2
-</code></pre>
-
-<h3 id="discuzx3-0">DiscuzX3.0</h3>
-
+</code></pre><h3 id="discuzx30">DiscuzX3.0</h3>
 <p>Download from <code>http://download.comsenz.com/DiscuzX/3.0/Discuz_X3.0_SC_UTF8.zip</code></p>
-
 <p>unzip first, put all the files and directories in <code>/var/www/html/bbs</code></p>
-
 <pre><code>sudo chown -R jason:jason /var/www/html/
 chmod -R 755 /var/www/html
 chmod -R 777 /var/www/html/bbs # for the installation on website
-</code></pre>
-
-<h4 id="fix-mysql-connect">fix <code>mysql_connect()</code></h4>
-
+</code></pre><h4 id="fix-mysql_connect">fix <code>mysql_connect()</code></h4>
 <p><code>sudo apt-get install php5.6-mysql</code></p>
-
-<h4 id="fix-xml-parser-create">fix <code>xml_parser_create()</code></h4>
-
+<h4 id="fix-xml_parser_create">fix <code>xml_parser_create()</code></h4>
 <p><code>sudo apt-get install php5.6-xml</code></p>
-
 <h3 id="finally">Finally</h3>
-
 <p>Go to <code>your_domain/bbs</code> to initiate your website!</p>
 
 	
@@ -246,11 +205,16 @@ chmod -R 777 /var/www/html/bbs # for the installation on website
 				<div class="paging">
 					<span class="paging-label">More Reading</span>
 					
+					<div class="paging-newer">
+						<span class="dark-red">Newer</span><span class="decorative-marker">//</span>
+						<a class="paging-link" href="https://kksun.github.io/posts/use-vscode-ssh-remote/">Use Vscode Ssh Remote</a>
+		            </div>
+		            
 
 					
 					<div class="paging-older">
 						<span class="dark-red">Older</span><span class="decorative-marker">//</span>
-			            <a class="paging-link" href="https://kksun.github.io/posts/use-vscode-ssh-remote/">Use Vscode Ssh Remote</a>
+			            <a class="paging-link" href="https://kksun.github.io/posts/fix_catalina/">Fix_catalina</a>
 		            </div>
 		            
 	            </div>
@@ -289,7 +253,7 @@ chmod -R 777 /var/www/html/bbs # for the installation on website
 		</ul>
 	</div>
 
-	<p>&copy; 2019. All rights reserved.</p>
+	<p>&copy; 2020. All rights reserved.</p>
 </div>
     </div>
   </div>

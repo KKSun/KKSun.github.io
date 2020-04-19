@@ -14,7 +14,7 @@
 <meta name="description" content="">
 <meta name="keywords" content="">
 <meta name="author" content="">
-<meta name="generator" content="Hugo 0.54.0" />
+<meta name="generator" content="Hugo 0.69.0" />
 
   <meta property="og:title" content="Hugo &#43; Github Pages" />
 <meta property="og:description" content="" />
@@ -127,17 +127,15 @@
 		    <div id="toc" class="pure-u-1 pure-u-md-1-4">
 				<small class="toc-label">Contents</small>
 		   	 	<nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#install-hugo-https-gohugo-io-getting-started-quick-start"><a href="https://gohugo.io/getting-started/quick-start/">Install Hugo</a></a></li>
-<li><a href="#choose-a-theme-https-themes-gohugo-io"><a href="https://themes.gohugo.io/">Choose a Theme</a></a></li>
-<li><a href="#host-on-github-https-gohugo-io-hosting-and-deployment-hosting-on-github"><a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">Host on Github</a></a>
-<ul>
-<li><a href="#references">references:</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#install-hugohttpsgohugoiogetting-startedquick-start"><a href="https://gohugo.io/getting-started/quick-start/">Install Hugo</a></a></li>
+    <li><a href="#choose-a-themehttpsthemesgohugoio"><a href="https://themes.gohugo.io/">Choose a Theme</a></a></li>
+    <li><a href="#host-on-githubhttpsgohugoiohosting-and-deploymenthosting-on-github"><a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">Host on Github</a></a>
+      <ul>
+        <li><a href="#references">references:</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
 		    </div>
 		    
@@ -165,63 +163,54 @@
 
 			
 
-            
-
-<h2 id="install-hugo-https-gohugo-io-getting-started-quick-start"><a href="https://gohugo.io/getting-started/quick-start/">Install Hugo</a></h2>
-
+            <h2 id="install-hugohttpsgohugoiogetting-startedquick-start"><a href="https://gohugo.io/getting-started/quick-start/">Install Hugo</a></h2>
 <p>Install hugo following the instruction of the linked document is a piece of cake. <a href="https://brew.sh/"><code>Homebrew</code></a> is a fantastic tool for mac users. After installation,  <code>Hugo new site myblog</code>  will generate a project called  <code>myblog</code>  for you. Things in <code>/myblog</code>  is the source code of your blog.</p>
-
-<h2 id="choose-a-theme-https-themes-gohugo-io"><a href="https://themes.gohugo.io/">Choose a Theme</a></h2>
-
+<h2 id="choose-a-themehttpsthemesgohugoio"><a href="https://themes.gohugo.io/">Choose a Theme</a></h2>
 <p>Actually, I don&rsquo;t feel those themes on Hugo official website are of good look. Some of them are not really easy to use because of their poor ducumentation. Hope you can find what you want, or maybe customize a theme for yourself.</p>
-
-<h2 id="host-on-github-https-gohugo-io-hosting-and-deployment-hosting-on-github"><a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">Host on Github</a></h2>
-
+<h2 id="host-on-githubhttpsgohugoiohosting-and-deploymenthosting-on-github"><a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">Host on Github</a></h2>
 <ul>
-<li>This step is not hard but might drive you crazy when you <strong>first</strong> do this following the instruction on  <code>Github</code> .</li>
-
-<li><p>For this step, two repos are needed (This seemes a little bit strange, but trust me, this is the easiest way to handle and the simplest method to understand.)</p></li>
-
-<li><p>one is to hold our source code of <a href="https://github.com/KKSun/blog-hugo">blog</a></p>
-
+<li>
+<p>This step is not hard but might drive you crazy when you <strong>first</strong> do this following the instruction on  <code>Github</code> .</p>
+</li>
+<li>
+<p>For this step, two repos are needed (This seemes a little bit strange, but trust me, this is the easiest way to handle and the simplest method to understand.)</p>
+</li>
+<li>
+<p>one is to hold our source code of <a href="https://github.com/KKSun/blog-hugo">blog</a></p>
 <ul>
 <li>create an empty repo called &lsquo;myblog-hugo&rsquo; on your github</li>
 <li><code>git clone //myblog-hugo-url//</code></li>
 <li>move all files your generate in  <code>/myblog</code>  into this cloned direction</li>
 <li><code>rm -rf public</code>
-
 <ul>
-<li>we will add public as a <a href="https://git-scm.com/docs/git-submodule">submodule</a> of this repo, so that we can handle these two repos seperately.
-
-<br /></li>
-</ul></li>
-</ul></li>
-
-<li><p>the other is used to hold the  <code>/public</code>  which can be generated every time you run  <code>Hugo server</code>  on your own computer.</p>
-
+<li>we will add public as a <a href="https://git-scm.com/docs/git-submodule">submodule</a> of this repo, so that we can handle these two repos seperately.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>the other is used to hold the  <code>/public</code>  which can be generated every time you run  <code>Hugo server</code>  on your own computer.</p>
 <ul>
 <li>create a new empty repo called &lsquo;your-name.github.io&rsquo;</li>
 <li><strong>NOTICE</strong>: <strong>&lsquo;your-name&rsquo; should be your github account</strong></li>
 <li>just like <a href="https://github.com/KKSun/kksun.github.io">kksun.github.io</a></li>
 <li>in  <code>/myblog-hugo</code>  direction
-
 <ul>
-<li><code>git submodule add git@github.com:your-name/your-name.github.io.git public</code><br /></li>
-<li>copy this file <a href="https://github.com/KKSun/blog-hugo/blob/master/deploy.sh">deploy.sh</a> into  <code>/myblog-hugo</code>  as well.
-<br /></li>
-</ul></li>
-</ul></li>
-
-<li><p><strong>Remember</strong> to give permission to run this script. This script can publish any change you that you make about your blog with one click.</p>
-
+<li><code>git submodule add git@github.com:your-name/your-name.github.io.git public</code></li>
+<li>copy this file <a href="https://github.com/KKSun/blog-hugo/blob/master/deploy.sh">deploy.sh</a> into  <code>/myblog-hugo</code>  as well.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Remember</strong> to give permission to run this script. This script can publish any change you that you make about your blog with one click.</p>
 <ul>
 <li><code>chmod +x deploy.sh</code></li>
 <li><code>./deploy.sh</code></li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <h3 id="references">references:</h3>
-
 <ul>
 <li><a href="http://nanshu.wang/post/2015-01-31/">http://nanshu.wang/post/2015-01-31/</a></li>
 <li><a href="http://lucumt.info/posts/create-website-with-hugo/">http://lucumt.info/posts/create-website-with-hugo/</a></li>
@@ -245,14 +234,14 @@
 					
 					<div class="paging-newer">
 						<span class="dark-red">Newer</span><span class="decorative-marker">//</span>
-						<a class="paging-link" href="https://kksun.github.io/posts/hugoandmacdown/">Hugo &#43; macdown &#43; Terminal</a>
+						<a class="paging-link" href="https://kksun.github.io/about/">About me</a>
 		            </div>
 		            
 
 					
 					<div class="paging-older">
 						<span class="dark-red">Older</span><span class="decorative-marker">//</span>
-			            <a class="paging-link" href="https://kksun.github.io/about/">About me</a>
+			            <a class="paging-link" href="https://kksun.github.io/posts/hugoandmacdown/">Hugo &#43; macdown &#43; Terminal</a>
 		            </div>
 		            
 	            </div>
@@ -291,7 +280,7 @@
 		</ul>
 	</div>
 
-	<p>&copy; 2019. All rights reserved.</p>
+	<p>&copy; 2020. All rights reserved.</p>
 </div>
     </div>
   </div>

@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blog Tools on sudo KKSun</title>
+    <title>blog &amp; tools on sudo KKSun</title>
     <link>https://kksun.github.io/catagories/blog-tools/</link>
-    <description>Recent content in Blog Tools on sudo KKSun</description>
+    <description>Recent content in blog &amp; tools on sudo KKSun</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Tue, 12 Dec 2017 05:04:57 -0500</lastBuildDate>

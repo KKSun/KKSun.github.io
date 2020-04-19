@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 <head>
   <title>
-    Mac // sudo KKSun
+    mac // sudo KKSun
   </title>
 
   <link href="http://gmpg.org/xfn/11" rel="profile">
@@ -14,9 +14,9 @@
 <meta name="description" content="">
 <meta name="keywords" content="">
 <meta name="author" content="">
-<meta name="generator" content="Hugo 0.54.0" />
+<meta name="generator" content="Hugo 0.69.0" />
 
-  <meta property="og:title" content="Mac" />
+  <meta property="og:title" content="mac" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:locale" content="en_US" />
@@ -124,6 +124,47 @@
             <header class="post-header">
             
             <h1 class="post-title">
+              <a href="https://kksun.github.io/posts/fix_catalina/">Fix_catalina</a>
+            </h1>
+            </header>
+            <p class="post-meta">
+            	
+		          <span class="post-date">
+		            <span class="post-date-day"><sup>18</sup></span><span class="post-date-separator">/</span><span class="post-date-month">Apr</span> <span class="post-date-year">2020</span>
+		          </span>
+      				
+      				
+      					
+      				
+              
+                <span class="post-reading-time"><i class="fa fa-clock-o"></i> <em>1 min. read</em></span>
+              
+      				
+            </p>
+            
+              <h2 id="cannot-build-c-program-after-upgrade-to-macos-1015">Cannot build C program after upgrade to MacOS-10.15</h2>
+<h3 id="why">Why</h3>
+<p>This is because apple change the path to the clang, those fundamental things are collected into <code>/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk</code></p>
+<h3 id="following-these-steps">Following these steps</h3>
+<ul>
+<li>open terminal and install xcode developer tools by</li>
+</ul>
+<p><code>xcode-select --install</code></p>
+<ul>
+<li>make link in <code>/usr/local/include/</code></li>
+</ul>
+<p><code>sudo ln -s /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/* /usr/local/include/</code></p>
+<ul>
+<li>all set</li>
+</ul>
+
+            
+          </section>
+        
+          <section  class="post">
+            <header class="post-header">
+            
+            <h1 class="post-title">
               <a href="https://kksun.github.io/posts/new_mac_setting/">New Mac Settings for OBSESSIONS</a>
             </h1>
             </header>
@@ -142,64 +183,37 @@
       				
             </p>
             
-              
-
-<h1 id="强迫症的新macbook设置指南">强迫症的新Macbook设置指南</h1>
-
+              <h1 id="强迫症的新macbook设置指南">强迫症的新Macbook设置指南</h1>
 <p>新mac到了，想要保持以前的使用习惯还是要配置一番，边配置边写咯</p>
-
 <h3 id="触摸板三指拖移">触摸板三指拖移</h3>
-
 <p>三指拖移在设置&gt;辅助功能&gt;鼠标与触摸板&gt;触摸板选项，启动拖移中选择三指拖移。</p>
-
 <h3 id="显示电量百分比">显示电量百分比</h3>
-
 <p>确认节能器的显示电源状态已经打勾（默认），在屏幕顶上菜单条中点击电池，选择显示电池百分比。</p>
-
-<h3 id="brew-安装"><code>brew</code>安装</h3>
-
+<h3 id="brew安装"><code>brew</code>安装</h3>
 <p>首先下载brew的安装脚本<a href="https://github.com/KKSun/backup-for-mac-settings/blob/master/brew_install.rb">brew安装脚本</a>
 <code>ruby brew_install.rb</code></p>
-
-<h3 id="链接-brewcask">链接<code>brewcask</code></h3>
-
+<h3 id="链接brewcask">链接<code>brewcask</code></h3>
 <p><code>brew tap caskroom/cask</code></p>
-
 <h3 id="用brew安装一切">用brew安装一切</h3>
-
 <p><code>python3</code>
 <code>brew cask install java</code>
 ……
 所有的软件源管理都在<code>brew</code>中，<code>yarn</code>、<code>pip</code>、<code>npm</code>都通过<code>brew</code>安装。</p>
-
-<h3 id="brew-cask-安装小插件"><code>brew cask</code>安装小插件</h3>
-
+<h3 id="brew-cask安装小插件"><code>brew cask</code>安装小插件</h3>
 <p>包括<code>quicksilver</code>，<code>go2shell</code></p>
-
-<h3 id="轻度修改-vimrc">轻度修改<code>.vimrc</code></h3>
-
+<h3 id="轻度修改vimrc">轻度修改<code>.vimrc</code></h3>
 <p>只添加三行，显示一下高亮代码即可</p>
-
 <pre><code>syntax enable
 syntax on
 colorscheme desert
-</code></pre>
-
-<h3 id="配置shell">配置shell</h3>
-
+</code></pre><h3 id="配置shell">配置shell</h3>
 <p>在shell的设置中将默认shell改为zsh，我没有使用iTerm2，用的就是Mac自带的终端，改成自己喜欢的颜色和字体就好</p>
-
 <pre><code>git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
-</code></pre>
-
-<h3 id="配置quick-look">配置quick look</h3>
-
+</code></pre><h3 id="配置quick-look">配置quick look</h3>
 <p>使用“一指禅”来查看各种文件，包括代码高亮和视频等。
 脚本链接<a href="https://github.com/KKSun/backup-for-mac-settings/blob/master/quicklookinstall.sh">quick look安装脚本</a></p>
-
 <h3 id="用virtual-box安装ubuntu">用virtual box安装ubuntu</h3>
-
 <p>有的时候不的不用linux（T—T！）
 vmware碰到了显示不全的问题，安装进行不下去；如果使用快速安装则不能装增强应用。感觉很坑，遂弃之。
 parallel desktop碰到的问题是安装后重启不能进入系统，也弃了。
@@ -207,11 +221,8 @@ parallel desktop碰到的问题是安装后重启不能进入系统，也弃了�
 安装增强之后我做到了双向共享剪贴板（文字），但不能系统间文件拖拽。
 共享文件夹在安装增强应用后会自动挂在在<code>/media</code>文件夹下，如果不能访问共享文件夹，把本机用户添加到vboxsf用户组就好了。
 这个虚拟机先凑合使着</p>
-
 <h3 id="安装win双系统">安装win双系统</h3>
-
 <h3 id="剩下的随用随装">剩下的随用随装</h3>
-
 <p>包括intellij idea，pycharm，anaconda等等</p>
 
             
@@ -240,7 +251,7 @@ parallel desktop碰到的问题是安装后重启不能进入系统，也弃了�
             </p>
             
               <article class="post-summary">
-            	Delete and re-install Mysql Way to completely delete Mysql on Macbook It is hard to delete Mysql completely on mac, because it is not in /Application folder and it has many parts deperated in different places.
+            	Delete and re-install Mysql Way to completely delete Mysql on Macbook It is hard to delete Mysql completely on mac, because it is not in /Application  folder and it has many parts deperated in different places.
 Following the terminal command below sudo rm /usr/local/mysql sudo rm -rf /usr/local/mysql* sudo rm -rf /Library/StartupItems/MySQLCOM sudo rm -rf /Library/PreferencePanes/My* vim /etc/hostconfig /* remove the line &quot;MYSQLCOM=-YES-&quot; and save the file if you do not have this file before just skip this step */ rm -rf ~/Library/PreferencePanes/My* sudo rm -rf /Library/Receipts/mysql* sudo rm -rf /Library/Receipts/MySQL* sudo rm -rf /var/db/receipts/com.
               </article>
 			  <div class="read-more-link">
@@ -261,7 +272,7 @@ Following the terminal command below sudo rm /usr/local/mysql sudo rm -rf /usr/l
 		</ul>
 	</div>
 
-	<p>&copy; 2019. All rights reserved.</p>
+	<p>&copy; 2020. All rights reserved.</p>
 </div>
     </div>
   </div>

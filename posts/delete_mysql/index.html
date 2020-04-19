@@ -14,7 +14,7 @@
 <meta name="description" content="">
 <meta name="keywords" content="">
 <meta name="author" content="">
-<meta name="generator" content="Hugo 0.54.0" />
+<meta name="generator" content="Hugo 0.69.0" />
 
   <meta property="og:title" content="Delete &amp; Reinstall Mysql on Mac" />
 <meta property="og:description" content="" />
@@ -127,20 +127,15 @@
 		    <div id="toc" class="pure-u-1 pure-u-md-1-4">
 				<small class="toc-label">Contents</small>
 		   	 	<nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#delete-and-re-install-mysql">Delete and re-install <code>Mysql</code></a>
-<ul>
-<li><a href="#way-to-completely-delete-mysql-on-macbook">Way to completely delete <code>Mysql</code> on Macbook</a></li>
-<li><a href="#following-the-terminal-command-below">Following the terminal command below</a></li>
-<li><a href="#re-install-mysql-via-brew">Re-install <code>Mysql</code> via <code>brew</code></a>
-<ul>
-<li><a href="#reference">Reference</a></li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#delete-and-re-install-mysql">Delete and re-install <code>Mysql</code></a>
+      <ul>
+        <li><a href="#way-to-completely-delete-mysql-on-macbook">Way to completely delete <code>Mysql</code> on Macbook</a></li>
+        <li><a href="#following-the-terminal-command-below">Following the terminal command below</a></li>
+        <li><a href="#re-install-mysql-via-brew">Re-install <code>Mysql</code> via <code>brew</code></a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
 		    </div>
 		    
@@ -168,16 +163,10 @@
 
 			
 
-            
-
-<h2 id="delete-and-re-install-mysql">Delete and re-install <code>Mysql</code></h2>
-
+            <h2 id="delete-and-re-install-mysql">Delete and re-install <code>Mysql</code></h2>
 <h3 id="way-to-completely-delete-mysql-on-macbook">Way to completely delete <code>Mysql</code> on Macbook</h3>
-
-<p>It is hard to delete <code>Mysql</code> completely on mac, because it is not in <code>/Application</code> folder and it has many parts deperated in different places.</p>
-
+<p>It is hard to delete <code>Mysql</code> completely on mac, because it is not in <code>/Application </code> folder and it has many parts deperated in different places.</p>
 <h3 id="following-the-terminal-command-below">Following the terminal command below</h3>
-
 <pre><code>sudo rm /usr/local/mysql
 sudo rm -rf /usr/local/mysql*
 sudo rm -rf /Library/StartupItems/MySQLCOM
@@ -193,29 +182,15 @@ rm -rf ~/Library/PreferencePanes/My*
 sudo rm -rf /Library/Receipts/mysql*
 sudo rm -rf /Library/Receipts/MySQL*
 sudo rm -rf /var/db/receipts/com.mysql.*
-</code></pre>
-
-<p>Finally, <code>Mysql</code> will be deleted completely.</p>
-
+</code></pre><p>Finally, <code>Mysql</code> will be deleted completely.</p>
 <h3 id="re-install-mysql-via-brew">Re-install <code>Mysql</code> via <code>brew</code></h3>
-
 <pre><code>brew install mysql
-</code></pre>
-
-<p>After the installation, we can start mysql server by running</p>
-
+</code></pre><p>After the installation, we can start mysql server by running</p>
 <pre><code>mysql.server start
-</code></pre>
-
-<p>The benefit of <code>brew</code> appears after this step, because we can directly setup the initialization of <code>Mysql</code> by running</p>
-
+</code></pre><p>The benefit of <code>brew</code> appears after this step, because we can directly setup the initialization of <code>Mysql</code> by running</p>
 <pre><code>mysql_secure_installation
-</code></pre>
-
-<p>Following the steps and everything will be all set.</p>
-
+</code></pre><p>Following the steps and everything will be all set.</p>
 <h4 id="reference">Reference</h4>
-
 <p><a href="http://blog.csdn.net/liumaolincycle/article/details/51896592">mac安装与卸载mysql方法</a>
 <a href="https://segmentfault.com/q/1010000004078668">mac上使用brew安装mysql的后续</a></p>
 
@@ -237,14 +212,14 @@ sudo rm -rf /var/db/receipts/com.mysql.*
 					
 					<div class="paging-newer">
 						<span class="dark-red">Newer</span><span class="decorative-marker">//</span>
-						<a class="paging-link" href="https://kksun.github.io/posts/tensorflowonmac/">Try Tensorflow on mac</a>
+						<a class="paging-link" href="https://kksun.github.io/posts/long-distance-linux-command/">Remote Linux Command</a>
 		            </div>
 		            
 
 					
 					<div class="paging-older">
 						<span class="dark-red">Older</span><span class="decorative-marker">//</span>
-			            <a class="paging-link" href="https://kksun.github.io/posts/long-distance-linux-command/">Remote Linux Command</a>
+			            <a class="paging-link" href="https://kksun.github.io/posts/tensorflowonmac/">Try Tensorflow on mac</a>
 		            </div>
 		            
 	            </div>
@@ -283,7 +258,7 @@ sudo rm -rf /var/db/receipts/com.mysql.*
 		</ul>
 	</div>
 
-	<p>&copy; 2019. All rights reserved.</p>
+	<p>&copy; 2020. All rights reserved.</p>
 </div>
     </div>
   </div>

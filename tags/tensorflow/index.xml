@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tensorflow on sudo KKSun</title>
@@ -17,7 +17,7 @@
       <pubDate>Fri, 30 Mar 2018 16:33:37 -0400</pubDate>
       
       <guid>https://kksun.github.io/posts/tensorflowonmac/</guid>
-      <description>Use Tensorflow on my Macbook two ways to install  docker virtualenv  use virtualenv to install Tensorflow  first we get python and pip with us via brew on mac  -&amp;gt; python3 --verion Python 3.6.4 -&amp;gt; pip3 --version pip 9.0.1 from /usr/local/lib/python3.6/site-packages (python 3.6)   use pip to install virtualenv  pip3 install --upgrade virtualenv   after we get virtualenv, use this tool to create a virtual environment of tensoflow  -&amp;gt; virtualenv --system-site-packages -p python3 .</description>
+      <description>Use Tensorflow on my Macbook two ways to install  docker virtualenv  use virtualenv to install Tensorflow  first we get python and pip with us via brew on mac  -&amp;gt; python3 --verion Python 3.6.4 -&amp;gt; pip3 --version pip 9.0.1 from /usr/local/lib/python3.6/site-packages (python 3.6)  use pip to install virtualenv  pip3 install --upgrade virtualenv  after we get virtualenv, use this tool to create a virtual environment of tensoflow  -&amp;gt; virtualenv --system-site-packages -p python3 .</description>
     </item>
     
   </channel>

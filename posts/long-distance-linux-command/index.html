@@ -14,7 +14,7 @@
 <meta name="description" content="">
 <meta name="keywords" content="">
 <meta name="author" content="">
-<meta name="generator" content="Hugo 0.54.0" />
+<meta name="generator" content="Hugo 0.69.0" />
 
   <meta property="og:title" content="Remote Linux Command" />
 <meta property="og:description" content="" />
@@ -127,27 +127,19 @@
 		    <div id="toc" class="pure-u-1 pure-u-md-1-4">
 				<small class="toc-label">Contents</small>
 		   	 	<nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#ssh-command"><code>ssh</code> command</a>
-<ul>
-<li>
-<ul>
-<li><a href="#shell-to-login-remote-machine-without-entering-password">shell to login remote machine without entering password</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#scp-command"><code>scp</code> command</a>
-<ul>
-<li>
-<ul>
-<li><a href="#upload-files">upload files:</a></li>
-<li><a href="#download-files">download files:</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#ftp-command"><code>ftp</code> command</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#ssh-command"><code>ssh</code> command</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#scp-command"><code>scp</code> command</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#ftp-command"><code>ftp</code> command</a></li>
+  </ul>
 </nav>
 		    </div>
 		    
@@ -175,14 +167,9 @@
 
 			
 
-            
-
-<p>I have to work on Linux Server remotely these days. So I would like to take this as a note of commands on manipulating remote files.</p>
-
+            <p>I have to work on Linux Server remotely these days. So I would like to take this as a note of commands on manipulating remote files.</p>
 <h2 id="ssh-command"><code>ssh</code> command</h2>
-
 <h4 id="shell-to-login-remote-machine-without-entering-password">shell to login remote machine without entering password</h4>
-
 <pre><code>set user abc123
 set host 192.168.0.2
 set password [your password]
@@ -193,23 +180,14 @@ expect &quot;*assword:*&quot;
 send &quot;$password\r&quot;
 interact
 expect eof
-</code></pre>
-
-<h2 id="scp-command"><code>scp</code> command</h2>
-
+</code></pre><h2 id="scp-command"><code>scp</code> command</h2>
 <p>your user name is <code>abc123</code> and you want to copy file <code>this.md</code> from your desktop to your remote machine <code>192.168.0.2</code>.</p>
-
 <h4 id="upload-files">upload files:</h4>
-
 <p><code>scp ~/Desktop/this.md abc123@192.168.0.2:/assignment1</code>
 this command will copy your file <code>this.md</code> to the direction <code>/assignment1</code>.</p>
-
 <h4 id="download-files">download files:</h4>
-
 <p><code>scp -r root@192.168.0.2：~/Desktop/files</code> this command will copy all files from your remote machine to your <code>/files</code> direction on your desktop.</p>
-
 <h2 id="ftp-command"><code>ftp</code> command</h2>
-
 <p>to be continue&hellip;</p>
 
 	
@@ -230,14 +208,14 @@ this command will copy your file <code>this.md</code> to the direction <code>/as
 					
 					<div class="paging-newer">
 						<span class="dark-red">Newer</span><span class="decorative-marker">//</span>
-						<a class="paging-link" href="https://kksun.github.io/posts/delete_mysql/">Delete &amp; Reinstall Mysql on Mac</a>
+						<a class="paging-link" href="https://kksun.github.io/posts/hugoandmacdown/">Hugo &#43; macdown &#43; Terminal</a>
 		            </div>
 		            
 
 					
 					<div class="paging-older">
 						<span class="dark-red">Older</span><span class="decorative-marker">//</span>
-			            <a class="paging-link" href="https://kksun.github.io/posts/hugoandmacdown/">Hugo &#43; macdown &#43; Terminal</a>
+			            <a class="paging-link" href="https://kksun.github.io/posts/delete_mysql/">Delete &amp; Reinstall Mysql on Mac</a>
 		            </div>
 		            
 	            </div>
@@ -276,7 +254,7 @@ this command will copy your file <code>this.md</code> to the direction <code>/as
 		</ul>
 	</div>
 
-	<p>&copy; 2019. All rights reserved.</p>
+	<p>&copy; 2020. All rights reserved.</p>
 </div>
     </div>
   </div>

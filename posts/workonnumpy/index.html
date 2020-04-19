@@ -14,7 +14,7 @@
 <meta name="description" content="">
 <meta name="keywords" content="">
 <meta name="author" content="">
-<meta name="generator" content="Hugo 0.54.0" />
+<meta name="generator" content="Hugo 0.69.0" />
 
   <meta property="og:title" content="Work on Pandas, Numpy and Matplotlib" />
 <meta property="og:description" content="" />
@@ -127,24 +127,16 @@
 		    <div id="toc" class="pure-u-1 pure-u-md-1-4">
 				<small class="toc-label">Contents</small>
 		   	 	<nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#work-on-numpy-pandas-and-matplotlib">Work on Numpy, Pandas and Matplotlib</a>
-<ul>
-<li><a href="#import-cvs-as-data">Import CVS as data</a></li>
-<li><a href="#try-matplotlib">Try Matplotlib</a></li>
-<li><a href="#after-all-the-preparation-above">After all the preparation above&hellip;</a></li>
-<li><a href="#conclusion">Conclusion</a>
-<ul>
-<li>
-<ul>
-<li><a href="#reference">Reference</a></li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#work-on-numpy-pandas-and-matplotlib">Work on Numpy, Pandas and Matplotlib</a>
+      <ul>
+        <li><a href="#import-cvs-as-data">Import CVS as data</a></li>
+        <li><a href="#try-matplotlib">Try Matplotlib</a></li>
+        <li><a href="#after-all-the-preparation-above">After all the preparation above&hellip;</a></li>
+        <li><a href="#conclusion">Conclusion</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
 		    </div>
 		    
@@ -172,28 +164,18 @@
 
 			
 
-            
-
-<h2 id="work-on-numpy-pandas-and-matplotlib">Work on Numpy, Pandas and Matplotlib</h2>
-
+            <h2 id="work-on-numpy-pandas-and-matplotlib">Work on Numpy, Pandas and Matplotlib</h2>
 <p>These three libs are really useful in data analysis. I use a piece on dataset in Kaggle to show a little demo of using these libraries.</p>
-
 <h3 id="import-cvs-as-data">Import CVS as data</h3>
-
 <p>CVS files cannot be manipulated directly by python, therefore we use Pandas to convert it into what we need.</p>
-
 <pre><code>import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
 data = pd.read_csv('other-American_B01362.csv')
 x = data.values
-</code></pre>
-
-<p>In the code above, data is the DataFrame of Pandas. This is a map structure, we can use &lsquo;get(key)&rsquo; directly get data from DataFrame, or we can cast it into its values &ndash; array of Numpy, which can be easily sliced with Python syntax.</p>
-
+</code></pre><p>In the code above, data is the DataFrame of Pandas. This is a map structure, we can use &lsquo;get(key)&rsquo; directly get data from DataFrame, or we can cast it into its values &ndash; array of Numpy, which can be easily sliced with Python syntax.</p>
 <h3 id="try-matplotlib">Try Matplotlib</h3>
-
 <pre><code>df = pd.DataFrame({&quot;a&quot;: np.random.random(100),
                    &quot;b&quot;: np.random.random(100),
                    &quot;id&quot;: np.arange(100)})
@@ -203,15 +185,10 @@ Y = df.get(&quot;b&quot;)
 plt.scatter(X, Y)
 plt.show()
 
-</code></pre>
-
-<p>In this part, we make a Pandas DataFrame by outselves. with Matplotlib library, we draw the scatter plot below.
-<img src="https://tuchuang-1256147041.cos.na-toronto.myqcloud.com/Screen%20Shot%202018-08-20%20at%205.46.33%20AM.png" alt="sctter plot" /></p>
-
+</code></pre><p>In this part, we make a Pandas DataFrame by outselves. with Matplotlib library, we draw the scatter plot below.
+<img src="https://tuchuang-1256147041.cos.na-toronto.myqcloud.com/Screen%20Shot%202018-08-20%20at%205.46.33%20AM.png" alt="sctter plot"></p>
 <h3 id="after-all-the-preparation-above">After all the preparation above&hellip;</h3>
-
-<p>We start to put hands on our Kaggle data. I use &ldquo;other-American_B01362.csv&rdquo; file which we can see in the first code block.</p>
-
+<p>We start to put hands on our Kaggle data. I use &lsquo;&lsquo;other-American_B01362.csv&rsquo;&rsquo; file which we can see in the first code block.</p>
 <pre><code>a = [0] * 24
 
 for time in data.get(&quot;TIME&quot;).values:
@@ -229,25 +206,15 @@ for time in data.get(&quot;TIME&quot;).values:
 plt.bar(range(len(a)), a,fc='r')
 plt.show
 
-</code></pre>
-
-<p>In our chart, the X-axis is the time people picked up by uber (1 hour), Y-axis is the number of people picked up in that hour. We can see, in a day, people call uber most at 8:00 A.M. and 11:00 P.M..</p>
-
-<p><img src="https://tuchuang-1256147041.cos.na-toronto.myqcloud.com/Screen%20Shot%202018-08-20%20at%205.27.31%20AM.png" alt="uber chart" /></p>
-
+</code></pre><p>In our chart, the X-axis is the time people picked up by uber (1 hour), Y-axis is the number of people picked up in that hour. We can see, in a day, people call uber most at 8:00 A.M. and 11:00 P.M..</p>
+<p><img src="https://tuchuang-1256147041.cos.na-toronto.myqcloud.com/Screen%20Shot%202018-08-20%20at%205.27.31%20AM.png" alt="uber chart"></p>
 <h3 id="conclusion">Conclusion</h3>
-
 <p>After this tiny experienment, we can see:</p>
-
 <p>Pandas got a good DataFrame to deal with raw data, meanwhile Numpy provide very basic functions to manipulate data blocks as arrays with Python syntax.
 Matplotlib is a great tool to generate diagrams visualizing what we get from Numpy and Pandas.</p>
-
 <h5 id="reference">Reference</h5>
-
 <p>[1]<a href="https://www.jianshu.com/p/57e3c0a92f3a">https://www.jianshu.com/p/57e3c0a92f3a</a></p>
-
 <p>[2]<a href="https://matplotlib.org/gallery/statistics/barchart_demo.html">https://matplotlib.org/gallery/statistics/barchart_demo.html</a></p>
-
 <p>[3]<a href="https://www.kaggle.com/fivethirtyeight/uber-pickups-in-new-york-city">https://www.kaggle.com/fivethirtyeight/uber-pickups-in-new-york-city</a></p>
 
 	
@@ -261,14 +228,14 @@ Matplotlib is a great tool to generate diagrams visualizing what we get from Num
 					
 					<div class="paging-newer">
 						<span class="dark-red">Newer</span><span class="decorative-marker">//</span>
-						<a class="paging-link" href="https://kksun.github.io/posts/use-vscode-ssh-remote/">Use Vscode Ssh Remote</a>
+						<a class="paging-link" href="https://kksun.github.io/posts/new_mac_setting/">New Mac Settings for OBSESSIONS</a>
 		            </div>
 		            
 
 					
 					<div class="paging-older">
 						<span class="dark-red">Older</span><span class="decorative-marker">//</span>
-			            <a class="paging-link" href="https://kksun.github.io/posts/new_mac_setting/">New Mac Settings for OBSESSIONS</a>
+			            <a class="paging-link" href="https://kksun.github.io/posts/use-vscode-ssh-remote/">Use Vscode Ssh Remote</a>
 		            </div>
 		            
 	            </div>
@@ -307,7 +274,7 @@ Matplotlib is a great tool to generate diagrams visualizing what we get from Num
 		</ul>
 	</div>
 
-	<p>&copy; 2019. All rights reserved.</p>
+	<p>&copy; 2020. All rights reserved.</p>
 </div>
     </div>
   </div>

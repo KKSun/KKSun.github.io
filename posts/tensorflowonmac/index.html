@@ -14,7 +14,7 @@
 <meta name="description" content="">
 <meta name="keywords" content="">
 <meta name="author" content="">
-<meta name="generator" content="Hugo 0.54.0" />
+<meta name="generator" content="Hugo 0.69.0" />
 
   <meta property="og:title" content="Try Tensorflow on mac" />
 <meta property="og:description" content="" />
@@ -127,26 +127,16 @@
 		    <div id="toc" class="pure-u-1 pure-u-md-1-4">
 				<small class="toc-label">Contents</small>
 		   	 	<nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#use-tensorflow-on-my-macbook">Use <code>Tensorflow</code> on my Macbook</a>
-<ul>
-<li><a href="#two-ways-to-install">two ways to install</a></li>
-<li><a href="#use-virtualenv-to-install-tensorflow">use virtualenv to install <code>Tensorflow</code></a></li>
-<li><a href="#later-on-we-will-play-with-docker">Later on we will play with docker</a></li>
-<li><a href="#output-sample-after-400-iterations">Output sample after 400 iterations</a>
-<ul>
-<li>
-<ul>
-<li><a href="#style">style:</a></li>
-<li><a href="#input">input:</a></li>
-<li><a href="#output">output:</a></li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#use-tensorflow-on-my-macbook">Use <code>Tensorflow</code> on my Macbook</a>
+      <ul>
+        <li><a href="#two-ways-to-install">two ways to install</a></li>
+        <li><a href="#use-virtualenv-to-install-tensorflow">use virtualenv to install <code>Tensorflow</code></a></li>
+        <li><a href="#later-on-we-will-play-with-docker">Later on we will play with docker</a></li>
+        <li><a href="#output-sample-after-400-iterations">Output sample after 400 iterations</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
 		    </div>
 		    
@@ -174,68 +164,42 @@
 
 			
 
-            
-
-<h2 id="use-tensorflow-on-my-macbook">Use <code>Tensorflow</code> on my Macbook</h2>
-
+            <h2 id="use-tensorflow-on-my-macbook">Use <code>Tensorflow</code> on my Macbook</h2>
 <h3 id="two-ways-to-install">two ways to install</h3>
-
 <ul>
 <li>docker</li>
 <li>virtualenv</li>
 </ul>
-
 <h3 id="use-virtualenv-to-install-tensorflow">use virtualenv to install <code>Tensorflow</code></h3>
-
 <ul>
 <li>first we get python and pip with us via <code>brew</code> on mac</li>
 </ul>
-
 <pre><code>-&gt; python3 --verion
 Python 3.6.4
 -&gt; pip3 --version
 pip 9.0.1 from /usr/local/lib/python3.6/site-packages (python 3.6)
-</code></pre>
-
-<ul>
+</code></pre><ul>
 <li>use pip to install <code>virtualenv</code></li>
 </ul>
-
 <pre><code>pip3 install --upgrade virtualenv
-</code></pre>
-
-<ul>
+</code></pre><ul>
 <li>after we get <code>virtualenv</code>, use this tool to create a virtual environment of tensoflow</li>
 </ul>
-
 <pre><code>-&gt; virtualenv --system-site-packages -p python3 ./tensorflow
-</code></pre>
-
-<ul>
+</code></pre><ul>
 <li>finally work on tensorflow virtual environment, you will get a notation ahead your terminal direction</li>
 </ul>
-
 <pre><code>-&gt; workon tensorflow
 (tensorflow) -&gt; 
-</code></pre>
-
-<h3 id="later-on-we-will-play-with-docker">Later on we will play with docker</h3>
-
+</code></pre><h3 id="later-on-we-will-play-with-docker">Later on we will play with docker</h3>
 <p>learning docker &hellip;</p>
-
 <h3 id="output-sample-after-400-iterations">Output sample after 400 iterations</h3>
-
 <h5 id="style">style:</h5>
-
-<p><img src="https://tuchuang-1256147041.cos.na-toronto.myqcloud.com/2-style2.jpg" alt="style" /></p>
-
+<p><img src="https://tuchuang-1256147041.cos.na-toronto.myqcloud.com/2-style2.jpg" alt="style"></p>
 <h5 id="input">input:</h5>
-
-<p><img src="https://tuchuang-1256147041.cos.na-toronto.myqcloud.com/photo.jpg" alt="input" /></p>
-
+<p><img src="https://tuchuang-1256147041.cos.na-toronto.myqcloud.com/photo.jpg" alt="input"></p>
 <h5 id="output">output:</h5>
-
-<p><img src="https://tuchuang-1256147041.cos.na-toronto.myqcloud.com/newpic.jpg" alt="output" /></p>
+<p><img src="https://tuchuang-1256147041.cos.na-toronto.myqcloud.com/newpic.jpg" alt="output"></p>
 
 	
 			
@@ -255,14 +219,14 @@ pip 9.0.1 from /usr/local/lib/python3.6/site-packages (python 3.6)
 					
 					<div class="paging-newer">
 						<span class="dark-red">Newer</span><span class="decorative-marker">//</span>
-						<a class="paging-link" href="https://kksun.github.io/posts/new_mac_setting/">New Mac Settings for OBSESSIONS</a>
+						<a class="paging-link" href="https://kksun.github.io/posts/delete_mysql/">Delete &amp; Reinstall Mysql on Mac</a>
 		            </div>
 		            
 
 					
 					<div class="paging-older">
 						<span class="dark-red">Older</span><span class="decorative-marker">//</span>
-			            <a class="paging-link" href="https://kksun.github.io/posts/delete_mysql/">Delete &amp; Reinstall Mysql on Mac</a>
+			            <a class="paging-link" href="https://kksun.github.io/posts/new_mac_setting/">New Mac Settings for OBSESSIONS</a>
 		            </div>
 		            
 	            </div>
@@ -301,7 +265,7 @@ pip 9.0.1 from /usr/local/lib/python3.6/site-packages (python 3.6)
 		</ul>
 	</div>
 
-	<p>&copy; 2019. All rights reserved.</p>
+	<p>&copy; 2020. All rights reserved.</p>
 </div>
     </div>
   </div>

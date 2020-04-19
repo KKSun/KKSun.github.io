@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on sudo KKSun</title>
@@ -6,10 +6,22 @@
     <description>Recent content in Posts on sudo KKSun</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 13 Jun 2019 20:33:07 -0400</lastBuildDate>
+    <lastBuildDate>Sat, 18 Apr 2020 22:20:57 -0400</lastBuildDate>
     
 	<atom:link href="https://kksun.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Fix_catalina</title>
+      <link>https://kksun.github.io/posts/fix_catalina/</link>
+      <pubDate>Sat, 18 Apr 2020 22:20:57 -0400</pubDate>
+      
+      <guid>https://kksun.github.io/posts/fix_catalina/</guid>
+      <description>Cannot build C program after upgrade to MacOS-10.15 Why This is because apple change the path to the clang, those fundamental things are collected into /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk
+Following these steps  open terminal and install xcode developer tools by  xcode-select --install
+ make link in /usr/local/include/  sudo ln -s /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/* /usr/local/include/
+ all set  </description>
+    </item>
     
     <item>
       <title>Php &amp; Apache &amp; Mysql</title>
@@ -18,9 +30,9 @@
       
       <guid>https://kksun.github.io/posts/php-apache-mysql/</guid>
       <description>Environment for DiscuzX3.0 on Ubuntu Install php5.6 Add source first sudo add-apt-repository ppa:ondrej/php
-Install sudo apt-get update sudo apt-get install -y php5.6  Mysql5.7 install sudo apt-get install mysql sudo mysql -u root  in mysql use this line to set password for root
-UPDATE mysql.user SET plugin=&amp;quot;mysql_native_password&amp;quot;, authentication_string=PASSWORD(&amp;quot;password&amp;quot;) WHERE user=&amp;quot;root&amp;quot;; SET GLOBAL validate_password_policy=0;  restart, then you can login as root with password
-sudo service mysql restart  Apache is easy sudo apt-get install apache2  DiscuzX3.</description>
+Install sudo apt-get update sudo apt-get install -y php5.6 Mysql5.7 install sudo apt-get install mysql sudo mysql -u root in mysql use this line to set password for root
+UPDATE mysql.user SET plugin=&amp;quot;mysql_native_password&amp;quot;, authentication_string=PASSWORD(&amp;quot;password&amp;quot;) WHERE user=&amp;quot;root&amp;quot;; SET GLOBAL validate_password_policy=0; restart, then you can login as root with password
+sudo service mysql restart Apache is easy sudo apt-get install apache2 DiscuzX3.</description>
     </item>
     
     <item>
@@ -43,7 +55,7 @@ Try it! Then you can try to connect your server with Vscode locally. Really nice
       <guid>https://kksun.github.io/posts/workonnumpy/</guid>
       <description>Work on Numpy, Pandas and Matplotlib These three libs are really useful in data analysis. I use a piece on dataset in Kaggle to show a little demo of using these libraries.
 Import CVS as data CVS files cannot be manipulated directly by python, therefore we use Pandas to convert it into what we need.
-import numpy as np import pandas as pd import matplotlib.pyplot as plt data = pd.</description>
+import numpy as np import pandas as pd import matplotlib.pyplot as plt data = pd.read_csv(&#39;other-American_B01362.csv&#39;) x = data.</description>
     </item>
     
     <item>
@@ -60,8 +72,8 @@ brew安装 首先下载brew的安装脚本brew安装脚本 ruby brew_install.rb
 用brew安装一切 python3 brew cask install java …… 所有的软件源管理都在brew中，yarn、pip、npm都通过brew安装。
 brew cask安装小插件 包括quicksilver，go2shell
 轻度修改.vimrc 只添加三行，显示一下高亮代码即可
-syntax enable syntax on colorscheme desert  配置shell 在shell的设置中将默认shell改为zsh，我没有使用iTerm2，用的就是Mac自带的终端，改成自己喜欢的颜色和字体就好
-git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc  配置quick look 使用“一指禅”来查看各种文件，包括代码高亮和视频等。 脚本链接quick look安装脚本
+syntax enable syntax on colorscheme desert 配置shell 在shell的设置中将默认shell改为zsh，我没有使用iTerm2，用的就是Mac自带的终端，改成自己喜欢的颜色和字体就好
+git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc 配置quick look 使用“一指禅”来查看各种文件，包括代码高亮和视频等。 脚本链接quick look安装脚本
 用virtual box安装ubuntu 有的时候不的不用linux（T—T！） vmware碰到了显示不全的问题，安装进行不下去；如果使用快速安装则不能装增强应用。感觉很坑，遂弃之。 parallel desktop碰到的问题是安装后重启不能进入系统，也弃了。 回到virtual box，勉强用一用也可以，增强应用如果装不上先sudo apt-get upgrade，升级了依赖就能装上了。 安装增强之后我做到了双向共享剪贴板（文字），但不能系统间文件拖拽。 共享文件夹在安装增强应用后会自动挂在在/media文件夹下，如果不能访问共享文件夹，把本机用户添加到vboxsf用户组就好了。 这个虚拟机先凑合使着
 安装win双系统 剩下的随用随装 包括intellij idea，pycharm，anaconda等等</description>
     </item>
@@ -72,7 +84,7 @@ git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh cp ~/.oh-my-z
       <pubDate>Fri, 30 Mar 2018 16:33:37 -0400</pubDate>
       
       <guid>https://kksun.github.io/posts/tensorflowonmac/</guid>
-      <description>Use Tensorflow on my Macbook two ways to install  docker virtualenv  use virtualenv to install Tensorflow  first we get python and pip with us via brew on mac  -&amp;gt; python3 --verion Python 3.6.4 -&amp;gt; pip3 --version pip 9.0.1 from /usr/local/lib/python3.6/site-packages (python 3.6)   use pip to install virtualenv  pip3 install --upgrade virtualenv   after we get virtualenv, use this tool to create a virtual environment of tensoflow  -&amp;gt; virtualenv --system-site-packages -p python3 .</description>
+      <description>Use Tensorflow on my Macbook two ways to install  docker virtualenv  use virtualenv to install Tensorflow  first we get python and pip with us via brew on mac  -&amp;gt; python3 --verion Python 3.6.4 -&amp;gt; pip3 --version pip 9.0.1 from /usr/local/lib/python3.6/site-packages (python 3.6)  use pip to install virtualenv  pip3 install --upgrade virtualenv  after we get virtualenv, use this tool to create a virtual environment of tensoflow  -&amp;gt; virtualenv --system-site-packages -p python3 .</description>
     </item>
     
     <item>
@@ -81,7 +93,7 @@ git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh cp ~/.oh-my-z
       <pubDate>Wed, 07 Mar 2018 02:14:36 -0500</pubDate>
       
       <guid>https://kksun.github.io/posts/delete_mysql/</guid>
-      <description>Delete and re-install Mysql Way to completely delete Mysql on Macbook It is hard to delete Mysql completely on mac, because it is not in /Application folder and it has many parts deperated in different places.
+      <description>Delete and re-install Mysql Way to completely delete Mysql on Macbook It is hard to delete Mysql completely on mac, because it is not in /Application  folder and it has many parts deperated in different places.
 Following the terminal command below sudo rm /usr/local/mysql sudo rm -rf /usr/local/mysql* sudo rm -rf /Library/StartupItems/MySQLCOM sudo rm -rf /Library/PreferencePanes/My* vim /etc/hostconfig /* remove the line &amp;quot;MYSQLCOM=-YES-&amp;quot; and save the file if you do not have this file before just skip this step */ rm -rf ~/Library/PreferencePanes/My* sudo rm -rf /Library/Receipts/mysql* sudo rm -rf /Library/Receipts/MySQL* sudo rm -rf /var/db/receipts/com.</description>
     </item>
     
@@ -92,7 +104,7 @@ Following the terminal command below sudo rm /usr/local/mysql sudo rm -rf /usr/l
       
       <guid>https://kksun.github.io/posts/long-distance-linux-command/</guid>
       <description>I have to work on Linux Server remotely these days. So I would like to take this as a note of commands on manipulating remote files.
-ssh command shell to login remote machine without entering password set user abc123 set host 192.168.0.2 set password [your password] set timeout -1 spawn ssh $user@$host expect &amp;quot;*assword:*&amp;quot; send &amp;quot;$password\r&amp;quot; interact expect eof  scp command your user name is abc123 and you want to copy file this.</description>
+ssh command shell to login remote machine without entering password set user abc123 set host 192.168.0.2 set password [your password] set timeout -1 spawn ssh $user@$host expect &amp;quot;*assword:*&amp;quot; send &amp;quot;$password\r&amp;quot; interact expect eof scp command your user name is abc123 and you want to copy file this.</description>
     </item>
     
     <item>
