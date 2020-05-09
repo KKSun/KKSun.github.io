@@ -14,7 +14,7 @@
 <meta name="description" content="">
 <meta name="keywords" content="">
 <meta name="author" content="">
-<meta name="generator" content="Hugo 0.69.0" />
+<meta name="generator" content="Hugo 0.70.0" />
 
   <meta property="og:title" content="mac" />
 <meta property="og:description" content="" />
@@ -142,22 +142,15 @@
       				
             </p>
             
-              <h2 id="cannot-build-c-program-after-upgrade-to-macos-1015">Cannot build C program after upgrade to MacOS-10.15</h2>
-<h3 id="why">Why</h3>
-<p>This is because apple change the path to the clang, those fundamental things are collected into <code>/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk</code></p>
-<h3 id="following-these-steps">Following these steps</h3>
-<ul>
-<li>open terminal and install xcode developer tools by</li>
-</ul>
-<p><code>xcode-select --install</code></p>
-<ul>
-<li>make link in <code>/usr/local/include/</code></li>
-</ul>
-<p><code>sudo ln -s /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/* /usr/local/include/</code></p>
-<ul>
-<li>all set</li>
-</ul>
-
+              <article class="post-summary">
+            	Cannot build C program after upgrade to MacOS-10.15 Why This is because apple change the path to the clang, those fundamental things are collected into /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk
+Following these steps  open terminal and install xcode developer tools by  xcode-select --install
+ make link in /usr/local/include/  sudo ln -s /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/* /usr/local/include/
+（Update） Install Ruby with rbenv rbenv directly compile Ruby from source code. Therefore, we can still see some core files are missing in /usr.
+              </article>
+			  <div class="read-more-link">
+				<a href="https://kksun.github.io/posts/fix_catalina/"><span class="read-more-slashes">//</span>Read More...</a>
+			  </div>
             
           </section>
         

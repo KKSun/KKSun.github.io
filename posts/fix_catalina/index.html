@@ -14,7 +14,7 @@
 <meta name="description" content="">
 <meta name="keywords" content="">
 <meta name="author" content="">
-<meta name="generator" content="Hugo 0.69.0" />
+<meta name="generator" content="Hugo 0.70.0" />
 
   <meta property="og:title" content="Fix MacOS 10.15 Clang Link" />
 <meta property="og:description" content="" />
@@ -132,6 +132,7 @@
       <ul>
         <li><a href="#why">Why</a></li>
         <li><a href="#following-these-steps">Following these steps</a></li>
+        <li><a href="#update-install-ruby-with-rbenv">（Update） Install Ruby with <code>rbenv</code></a></li>
       </ul>
     </li>
   </ul>
@@ -174,10 +175,26 @@
 <li>make link in <code>/usr/local/include/</code></li>
 </ul>
 <p><code>sudo ln -s /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/* /usr/local/include/</code></p>
-<ul>
-<li>all set</li>
-</ul>
+<h3 id="update-install-ruby-with-rbenv">（Update） Install Ruby with <code>rbenv</code></h3>
+<p><code>rbenv</code> directly compile Ruby from source code. Therefore, we can still see some core files are missing in <code>/usr</code>. To install ruby, <code>$(xcrun --show-sdk-path)/usr/include/</code> should be linked as <code>/usr/include</code> with <code>csrutil</code> disabled. <a href="https://ss64.com/osx/csrutil.html">about csrutil</a></p>
+<p>The scripts below should be put into <code>~/.zshrc</code>. Comment these lines out after ruby is installed or it might influnce original C/C++ environment.</p>
+<pre><code># Setup Compiler paths for readline and openssl 
+local READLINE_PATH=$(brew --prefix readline)
+local OPENSSL_PATH=$(brew --prefix openssl)
+export LDFLAGS=&quot;-L$READLINE_PATH/lib -L$OPENSSL_PATH/lib&quot;
+export CPPFLAGS=&quot;-I$READLINE_PATH/include -I$OPENSSL_PATH/include&quot;
+export PKG_CONFIG_PATH=&quot;$READLINE_PATH/lib/pkgconfig:$OPENSSL_PATH/lib/pkgconfig&quot;
 
+# Use the OpenSSL from Homebrew instead of ruby-build
+# Note: the Homebrew version gets updated, the ruby-build version doesn't
+export RUBY_CONFIGURE_OPTS=&quot;--with-openssl-dir=$OPENSSL_PATH&quot;
+
+# Place openssl@1.1 at the beginning of your PATH (preempt system libs)
+export PATH=$OPENSSL_PATH/bin:$PATH
+
+# Set SDKROOT
+export SDKROOT=&quot;$(xcrun --show-sdk-path)&quot;
+</code></pre>
 	
 			
 

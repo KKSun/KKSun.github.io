@@ -20,7 +20,7 @@
       <description>Cannot build C program after upgrade to MacOS-10.15 Why This is because apple change the path to the clang, those fundamental things are collected into /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk
 Following these steps  open terminal and install xcode developer tools by  xcode-select --install
  make link in /usr/local/include/  sudo ln -s /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/* /usr/local/include/
- all set  </description>
+（Update） Install Ruby with rbenv rbenv directly compile Ruby from source code. Therefore, we can still see some core files are missing in /usr.</description>
     </item>
     
     <item>
